@@ -148,7 +148,7 @@ def init_usb_camera_info():
             usb_camera_info.remove(cam)
 
 # Given the desired minimum FPS, pick the 'best' format/resolution.
-def select_format(desired_fps):
+def select_format(desired_fps, min_fps):
     format = None
 
     while True:
@@ -209,9 +209,9 @@ def select_format(desired_fps):
                 logger.debug("Selected format is: %s at resolution %s x %s and %s FPS",
                              format, res[0], res[1], desired_fps)
 
-            # Try a lower framerate if the camera doesn't support 30 FPS.
-            # The minimum framerate that is sufficient for Body Pose Estimation is 15 FPS.
-            if format == None and desired_fps != 15:
+            # Try a lower framerate if the camera doesn't support current FPS.
+            # Stop if it would take us past the minimum FPS.
+            if format == None and desired_fps != min_fps:
                 # Pop the next highest FPS off the (sorted) list
                 all_framerates.sort(reverse=True)
                 logger.debug("FPS options remaining: ")
@@ -229,13 +229,11 @@ def main():
     logger = logging.getLogger('logger')
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--min_fps', type=int, default=30)
+    parser.add_argument('--min_fps', type=int, default=15)
     args = parser.parse_args()
 
-    ## TODO: obtain the minimum FPS from somewhere... ideally user input somehow...
-    ## TODO: modify select_format so that the FPS is the minimum (not exact)
     init_usb_camera_info()
-    fmt, fps = select_format(args.min_fps)
+    fmt, fps = select_format(60, args.min_fps)
     logger.error("Given minimum FPS of %s. Selected format: %s and FPS: %s", args.min_fps, fmt, fps)
 
 

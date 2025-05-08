@@ -1,4 +1,7 @@
+# You can either pull the image from the NVIDIA NGC container registry
 FROM nvcr.io/nvidia/l4t-pytorch:r35.2.1-pth2.0-py3
+# or Pull an unofficial one from jetson-containers
+# FROM dustynv/l4t-pytorch:r35.4.1
 
 WORKDIR /app
 

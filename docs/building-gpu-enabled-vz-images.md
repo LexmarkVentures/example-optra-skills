@@ -1,5 +1,9 @@
 # Building GPU enabled docker images for Optra Devices
 
+## Nvidia Runtime
+
+All skills on VZ devices will be ran with the "--runtime nvidia" flag. This gives the skill access to the GPU. More info on this flag can be found here: [Nvidia Runtime](https://developer.nvidia.com/container-runtime).
+
 ## Understanding L4T and JetPack for NVIDIA Jetson Devices
 
 When developing for any NVIDIA Jetson IoT devices including Optra devices powered by Nvidia, it’s essential to understand two software components: **L4T** and **JetPack SDK**. Unlike typical desktop or server development, **you do not manually install GPU drivers** for the Jetson hardware.
@@ -7,7 +11,7 @@ Instead, everything needed — the Linux kernel, device drivers, and low-level s
 
 ## What is L4T (Linux for Tegra)?
 
-**Linux for Tegra (L4T)** is a modified Ubuntu Linux distribution tailored specifically for Jetson hardware. 
+**Linux for Tegra (L4T)** is a modified Ubuntu Linux distribution tailored specifically for Jetson hardware.
 It includes:
 - A Linux kernel customized for Jetson SoCs
 - Hardware drivers (GPU, camera, etc.)
@@ -15,12 +19,12 @@ It includes:
 
 Essentially, L4T is the **operating system** that allows the Jetson hardware to boot and function correctly.
 
-Learn more here:  
+Learn more here:
 🔗 [Linux for Tegra (L4T) Documentation](https://developer.nvidia.com/embedded/linux-tegra)
 
 ## What is JetPack SDK?
 
-**JetPack** is the **full development kit** built on top of L4T.  
+**JetPack** is the **full development kit** built on top of L4T.
 It includes:
 - CUDA and cuDNN (for GPU-accelerated computing and neural networks)
 - TensorRT (for optimized AI inference)
@@ -30,15 +34,15 @@ It includes:
 
 JetPack provides all the building blocks needed for developing AI, computer vision, and multimedia applications on Jetson devices.
 
-Learn more here:  
+Learn more here:
 🔗 [JetPack SDK Documentation](https://developer.nvidia.com/embedded/jetpack)
 
 ## How They Relate
 
-**JetPack** includes a specific version of **L4T**, along with additional libraries and tools.  
+**JetPack** includes a specific version of **L4T**, along with additional libraries and tools.
 When you install or flash JetPack onto a Jetson device, you are also installing the matched L4T version underneath.
 
-For reference:  
+For reference:
 🔗 [JetPack and L4T Version Mapping](https://developer.nvidia.com/embedded/jetpack-archive)
 
 

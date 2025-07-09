@@ -9,7 +9,7 @@ Unlike typical edge development environments like desktops or Jetson devices, Op
 ## Getting Started
 
 1. [The Optra Portal](docs/optra-portal.md)
-2. [Skill Configuration](docs/skill.md)
+2. [Skill Configuration](docs/skills.md)
 3. [Example skills](examples/README.md)
 
 ## Advanced

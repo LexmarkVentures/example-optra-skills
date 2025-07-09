@@ -20,7 +20,7 @@ Each example skill includes a `Dockerfile`, a `README.md`, and some Python scrip
 
 ### 1. Building the Docker Container
 
-First, ensure Docker is installed on your build device. You can follow the installation instructions [here](http://docker.com/get-started/).
+First, ensure Docker is installed on your build machine. You can follow the installation instructions [here](http://docker.com/get-started/).
 
 Each example skill directory includes a sample Docker build command. It typically looks like this:
 

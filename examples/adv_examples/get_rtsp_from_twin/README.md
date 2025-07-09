@@ -10,8 +10,8 @@ docker build --platform linux/arm64 -t <registry>/get-rtsp-from-twin:<skill_tag>
 ## Non-natively (x64):
 docker buildx build --platform linux/arm64 -t <registry>/get-rtsp-from-twin:<skill_tag> --push .
 
-# Required Permissions:
-No permissions required.
+# Required Privileges:
+No privileges required.
 
 # Special Notes:
 Cameras must be added to the 'Cameras' tab of the device that is running the skill.

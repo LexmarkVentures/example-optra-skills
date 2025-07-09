@@ -11,5 +11,5 @@ docker build --platform linux/arm64 -t <registry>/get-rtsp-from-twin:<skill_tag>
 ## Non-natively (x64):
 docker buildx build --platform linux/arm64 -t <registry>/get-rtsp-from-twin:<skill_tag> --push .
 
-# Required Permissions
+# Required Privileges
   * USB cameras

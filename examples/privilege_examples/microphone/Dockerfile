@@ -5,7 +5,7 @@ WORKDIR /app
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install alsa-utils
+    apt-get install -y alsa-utils
 
 
 RUN pip3 install --upgrade pip

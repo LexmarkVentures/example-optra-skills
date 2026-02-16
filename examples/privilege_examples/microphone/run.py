@@ -36,7 +36,13 @@ def main():
     format = "S16_LE"
     rate = 48000
     channels = 1
-    device = "mic:CARD=APE,DEV=0"
+
+    # uncomment the following line for VZ6100 devices
+    # device = "mic:CARD=APE,DEV=0"
+    # VZ61k_mic_setup()
+
+    # uncomment the following line for cx2k devices
+    device = "mic:CARD=rockchiprk809,DEV=0"
 
     chunk_size = 4096
     buffer_duration = 0.1
@@ -53,9 +59,6 @@ def main():
         "--buffer-size", str(samples_per_buffer * 4),
         "--period-size", str(samples_per_buffer // 4),
     ]
-
-    # uncomment the following line to set up the VZ61k microphone
-    #VZ61k_mic_setup()
 
     try:
         print("Starting audio stream...")

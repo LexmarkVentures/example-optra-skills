@@ -152,12 +152,10 @@ def select_format(desired_fps, min_fps):
     format = None
 
     while True:
-        # TODO: support multiple USB cameras in the future
         device_formats = {}
 
         format_options = {}
 
-        # For each device (TODO: support > 1 device),
         # we need to choose the format with the highest resolution that supports the framerate we want.
         for device in usb_camera_info:
             all_framerates = []
@@ -220,9 +218,8 @@ def select_format(desired_fps, min_fps):
                 logger.debug("Trying a FPS of %i...", int(desired_fps))
             else:
                 # Stop if we have a format or our desired_fps can't go any lower
-                # TODO: rework this to support > 1 devices.
                 return format, str(desired_fps)
-            
+
 def main():
     global logger
 

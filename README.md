@@ -17,5 +17,3 @@ Unlike typical edge development environments like desktops or Jetson devices, Op
 * [Building GPU Enabled VZ Images](docs/building-gpu-enabled-vz-images.md) - read before running machine learning models or graphics accelerated code
 * [Developer Notes](docs/developer-notes.md) - info for devs
 * [Control Panel](docs/control-panel.md) - for network and wifi info
-* [Remote Device Tunnel](docs/remote-device-tunnel.md) - to access locally hosted servers remotely
-* [Troubleshooting](docs/troubleshooting.md) - if it all goes wrong

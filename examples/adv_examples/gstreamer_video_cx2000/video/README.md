@@ -1,0 +1,1 @@
+This folder is a placeholder for videos that will be included in the image.

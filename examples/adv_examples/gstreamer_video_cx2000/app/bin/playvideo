@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Audio devices
+# * default
+# * hdmi_output
+# * headphones
+
+gst-launch-1.0 playbin uri=file://$1 flags=3 video-sink="rkximagesink plane-id=305" audio-sink="alsasink device=default"

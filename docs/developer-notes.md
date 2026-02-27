@@ -20,6 +20,10 @@ Due to security, `docker exec ` has been removed but an alternative route has be
 
 Sometimes it is not obvious what the status of a skill is from looking at the portal. A good way to get the raw logs from the azure iot process is to use wingman to open a terminal on the device and running the `journalctl` command. This will give you all the raw logs from the device. These message will have information about pulling images, starting containers, and iot messages.
 
+## SSH daemon in a running container
+
+An alternative to wingman is to start an ssh daemon in the running docker container. This allows a developer to avoid using wingman to directly access a running container for development or using scp to copy data in or out of the container. An example of this can be found in the [gstreamer_video_cx2000 example](examples/adv_examples/gstreamer_video_cx2000).
+
 ## Azure Iot Device Management
 
 The service that is running the docker image on the device is [Azure Iot](https://learn.microsoft.com/en-us/azure/iot-edge/about-iot-edge). Every Optra device has two docker containers that always run, they are: the azureiotedge-hub and the azureiotedge-agent. Using wingman to run `docker ps` you should see these containers running. These docker containers have access to the docker socket and manage all the skills on the device.
@@ -39,4 +43,4 @@ Another common development cycle is to create a docker image that never stops ru
 ```dockerfile
 CMD ["tail", "-f", "/dev/null"]
 ```
-Which, when ran will never stop, this allows the user to use wingman to docker-exec into the skill and develop in a terminal using a text editor like vim or nano. This isn't always the most convenient development cycle but can help in a pinch.
+Which, when ran will never stop, this allows the user to use something like wingman or sshd running in the container to ssh into the running container and develop in a terminal using a text editor like vim or nano. This isn't always the most convenient development cycle but can help in a pinch.

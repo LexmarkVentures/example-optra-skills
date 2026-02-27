@@ -4,6 +4,15 @@
 
 All skills on VZ devices will be ran with the "--runtime nvidia" flag. This gives the skill access to the GPU. More info on this flag can be found here: [Nvidia Runtime](https://developer.nvidia.com/container-runtime).
 
+To access the runtime bindings the skill's Dockerfile needs to define two special environment variables:
+
+```Dockerfile
+ENV NVIDIA_VISIBLE_DEVICES=all
+ENV NVIDIA_DRIVER_CAPABILITIES=all
+```
+
+The official Nvidia base images already define these variables so if your skill is based on them you don't need to add these. More information of these environment variables and what they do can be found here: [Specialized Configurations with Docker](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/docker-specialized.html)
+
 ## Understanding L4T and JetPack for NVIDIA Jetson Devices
 
 When developing for any NVIDIA Jetson IoT devices including Optra devices powered by Nvidia, it’s essential to understand two software components: **L4T** and **JetPack SDK**. Unlike typical desktop or server development, **you do not manually install GPU drivers** for the Jetson hardware.

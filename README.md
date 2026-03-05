@@ -17,3 +17,5 @@ Unlike typical edge development environments like desktops or Jetson devices, Op
 * [Building GPU Enabled VZ Images](docs/building-gpu-enabled-vz-images.md) - read before running machine learning models or graphics accelerated code
 * [Developer Notes](docs/developer-notes.md) - info for devs
 * [Control Panel](docs/control-panel.md) - for network and wifi info
+* [Optra Settings](docs/optra-settings.md) - device settings
+* [GPIO](docs/gpio.md) - for the VZ5100 and VZ6100

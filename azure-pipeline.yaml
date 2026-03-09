@@ -1,0 +1,27 @@
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  - name: App.prem.poolName
+    value: prem_agent_pool_linux01
+    readonly: true
+
+stages:
+  - stage: mirror
+    displayName: Mirror to public GitHub repository
+    pool:
+      name: $(App.prem.poolName)
+    jobs:
+      - job: mirror
+        displayName: Push to GitHub
+        steps:
+          - checkout: self
+            fetchDepth: 0
+
+          - bash: |
+              git remote add github \
+                "git@github.com:LexmarkVentures/example-optra-skills.git"
+              git push github HEAD:main
+            displayName: Push to GitHub mirror

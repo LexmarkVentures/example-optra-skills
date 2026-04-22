@@ -1,6 +1,6 @@
 # Optra Portal Tutorial
 
-Here is a simple walkthrough to show a new user the Optra portal and get your first skill running on your device.
+Here is a simple walkthrough to help you explore the Optra portal and get your first skill running on your device.
 
 **To participate in this walk through, you will need an Optra device**
 
@@ -24,13 +24,13 @@ To create your first skill in the Portal; select "+ New Skill" in the top right 
 
 For this walkthrough we will only be using the Container tab. For more information about these different configuration options or a deeper dive into skills go here:  [Skill Configuration](skills.md).
 
-Now give the skill a simple name like "My First Skill" the type "docker.io/fluent/fluent-bit" into the "Docker Container URL" field. This is a simple open source utility for printing telemetry to standard out; if you are interested, the docs can be found here: [Fluent-bit](https://github.com/fluent/fluent-bit). Finally, click save at the bottom of the configuration page and you should see your skill listed under the skills tab.
+Now give the skill a simple name like "My First Skill", then type "docker.io/fluent/fluent-bit" into the "Docker Container URL" field. This is a simple open source utility for printing telemetry to standard out; if you are interested, the docs can be found here: [Fluent-bit](https://github.com/fluent/fluent-bit). Finally, click save at the bottom of the configuration page and you should see your skill listed under the skills tab.
 
 ### Workflows
 
 A workflow is how a user deploys skills to the Optra devices. To create a new workflow, select "+ New Workflow" in the top right corner and give it a name. Then you should see your empty workflow listed. Now you can add your recently enrolled device and skill by selecting the "+ Add" button under the devices and skills section.
 
-Once your device and skill has been added the "Sync" button should appear green in the top right corner of the workflow. When the button is green, this means that there are staged changes that you have made to the workflow that have not been pushed to the device. Now you can click that sync button to push the changes to the device.
+Once your device and skill have been added, the "Sync" button should appear green in the top right corner of the workflow. When the button is green, this means that there are staged changes that you have made to the workflow that have not been pushed to the device. Now you can click that sync button to push the changes to the device.
 
 It will take a while for the device to receive the new configuration from the portal, pull the docker image that you configured, and start the skill. You can monitor the state of the skill by selecting the device in the workflow, then navigating to the skills section. This will give you a list of all the skills that have been added to the device and their status. The status will either be: "Running", "Stopped", or "Unknown". While the docker image is being pulled, the status of the skill will be "Unknown" and should change to "Running" once started.
 
@@ -68,4 +68,4 @@ ______ _                  _    ______ _ _             ___  _____
 
 ## Conclusion
 
-Now that you have created your own skill in the Optra portal, you should be ready to build your own docker image and custom skill. To do this, you can build your own or try one of the example skills in the src directory. 
+Now that you have created your own skill in the Optra portal, you should be ready to build your own Docker image and custom skill. To do this, you can build your own or try one of the example skills in the examples directory. 

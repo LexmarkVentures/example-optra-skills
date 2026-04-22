@@ -60,7 +60,7 @@ For reference:
 ## Available Base Images for Development
 
 ### Nvidia Official Images
-Nvidia provides a range of images to support development on their edge devices. Those images can be found here: [NGC Image Catalog](https://catalog.ngc.nvidia.com/). All images that have gpu support are based on the base L4T image and add tools and functionality on top of that. When using NVIDIA's L4T-based images for Jetson, it's important to understand that they are layered. The L4T Base Image provides the minimal Ubuntu root filesystem along with the essential drivers for Jetson hardware. The L4T CUDA Image builds on top of the Base Image by adding CUDA libraries for GPU acceleration.Finally, the L4T JetPack Image includes everything from the CUDA Image, plus additional AI, vision, and multimedia libraries (like cuDNN, TensorRT, DeepStream, and OpenCV).
+Nvidia provides a range of images to support development on their edge devices. Those images can be found here: [NGC Image Catalog](https://catalog.ngc.nvidia.com/). All images that have gpu support are based on the base L4T image and add tools and functionality on top of that. When using NVIDIA's L4T-based images for Jetson, it's important to understand that they are layered. The L4T Base Image provides the minimal Ubuntu root filesystem along with the essential drivers for Jetson hardware. The L4T CUDA Image builds on top of the Base Image by adding CUDA libraries for GPU acceleration. Finally, the L4T JetPack Image includes everything from the CUDA Image, plus additional AI, vision, and multimedia libraries (like cuDNN, TensorRT, DeepStream, and OpenCV).
 
 ### Jetson Container Images
 Another place to get L4T enabled jetson images -- as well as some inspiration -- is the [Jetson Container Images Repo](https://github.com/dusty-nv/jetson-containers/tree/master). This repo contains many projects that have been developed for the nvidia platform as well as links to the docker repo that contains the images the projects are based on.
@@ -74,5 +74,5 @@ It is important when choosing an image, you make sure that the image is built on
 | OS                  | L4T Ubuntu 18.04         | L4T Ubuntu 18.04         | L4T Ubuntu 18.04         | L4T Ubuntu 20.04              |
 | JetPack release     | 4.5.1                    | 4.6.1                    | 4.6.1                    | 5.1 / 5.1.2                   |
 | L4T release         | 32.5.1                   | 32.7.1                   | 32.7.3                   | 35.2.1 / 35.4.1               |
-| CUDA release        | CUDA 10.2                | CUDA 10.2                | 10.2.300                 | CUDA 11.4 / 11.4.19           |
+| CUDA release        | CUDA 10.2                | CUDA 10.2                | CUDA 10.2.300            | CUDA 11.4 / 11.4.19           |
 

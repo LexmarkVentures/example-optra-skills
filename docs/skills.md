@@ -10,11 +10,11 @@ When creating a skill, there are five main types of configuration: Container, In
 
 ### Container
 
-This section configures all the basic docker repo information for the image used in the skill. An skill can use an image from a public repo or a private repo using a username and password. This section is also where the name, version, and appearance of the skill is configured.
+This section configures all the basic docker repo information for the image used in the skill. A skill can use an image from a public repo or a private repo using a username and password. This section is also where the name, version, and appearance of the skill is configured.
 
 ### Inputs
 
-Inputs are a way for a portal user to define configuration for all devices in a workflow. If a skill has an input, a user can click the skill the workflow and changes it's value for all devices in that workflow. These inputs are sent to the device through the iot twin and can be accessed in the skill using the azure iot device libraries (see inputs example skill). Inputs have two fields to configure: the key and the label. The key is the name of the field iot message and the label is the human readable description that will show in the portal.
+Inputs are a way for a portal user to define configuration for all devices in a workflow. If a skill has an input, a user can click the skill in the workflow and change its value for all devices in that workflow. These inputs are sent to the device through the IoT twin and can be accessed in the skill using the Azure IoT device libraries (see inputs example skill). Inputs have two fields to configure: the key and the label. The key is the name of the field in the IoT message and the label is the human-readable description that will show in the portal.
 
 ### Outputs
 
@@ -22,9 +22,9 @@ Outputs are a way for a skill to send data to the portal. Like the inputs, this 
 
 ### Env
 
-The Env configuration is a way for environment variables to be configured from the portal. The configuration for this feature has two fields: key and value. The key is the name of the environment variable and value is it's value.
+The Env configuration is a way for environment variables to be configured from the portal. The configuration for this feature has two fields: key and value. The key is the name of the environment variable and value is its value.
 
-***Environment variables can also be set at the device level by clicking on the device in the workflow, click on the settings tab, and adding the variable in the env section***
+> **Note:** Environment variables can also be set at the device level by clicking on the device in the workflow, navigating to the settings tab, and adding the variable in the env section.
 
 ## Privileges
 

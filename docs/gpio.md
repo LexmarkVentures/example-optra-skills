@@ -1,6 +1,6 @@
 # GPIO Technical Specifications
 
-The VZ5100, VZ6000, and VZ6100 devices have that can be controlled by the skills. To get access to the GPIO pins, there is a privilege that needs to be enabled in the portal. An example of this can be found in the [GPIO Example Skill](../examples/optra_feature_examples/gpio). 
+The VZ5100, VZ6000, and VZ6100 devices have GPIO pins that can be controlled by skills. To get access to the GPIO pins, there is a privilege that needs to be enabled in the portal. An example of this can be found in the [GPIO Example Skill](../examples/optra_feature_examples/gpio). 
 
 ## Hardware Implementation
 - GPIO operates at 5V TTL levels, powered by a TI TCA6408ARSVR I/O expander

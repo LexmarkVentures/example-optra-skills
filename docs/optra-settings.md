@@ -1,8 +1,8 @@
 # Optra Device Settings
 
-The Optra device has a list of settings that can be read and set by a skill. These settings can be accessed through the settings socket -- "/run/edge.sock" -- and the settings path -- "webservices/noauth/settings". The settings socket is mounted in every container for easy developer access.
+The Optra device has a list of settings that can be read and set by a skill. These settings can be accessed through the settings socket — "/run/edge.sock" — and the settings path — "webservices/noauth/settings". The settings socket is mounted in every container for easy developer access.
 
-An example of a skill using these settings can be found in the [Optra Setings Example Skill](../examples/optra_feature_examples/optra-settings)
+An example of a skill using these settings can be found in the [Optra Settings Example Skill](../examples/optra_feature_examples/optra-settings)
 
 ## Device settings
 

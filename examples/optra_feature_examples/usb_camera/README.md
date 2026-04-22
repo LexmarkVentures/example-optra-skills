@@ -4,7 +4,9 @@ This is a simple sample skill that uses opencv to grab frames from a usb camera 
 
 # How to build
 
-    docker buildx build --platform linux/arm64 -t <registry>/usb_camera --push .
+```sh
+docker buildx build --platform linux/arm64 -t <registry>/usb_camera --push .
+```
 
 
 # Required Privileges

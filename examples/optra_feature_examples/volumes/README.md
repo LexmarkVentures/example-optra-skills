@@ -5,7 +5,9 @@ Once the skill is running and the counter is incrementing, the skill can be rest
 
 # How to build
 
-    docker buildx build --platform linux/arm64 -t <registry>/volumes --push .
+```sh
+docker buildx build --platform linux/arm64 -t <registry>/volumes --push .
+```
 
 
 # Required Privileges

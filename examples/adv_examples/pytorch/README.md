@@ -9,7 +9,9 @@ The docker image for this example skill is based on a docker image distributed b
 
 # How to build
 
-    docker buildx build --platform linux/arm64 -t <registry>/pytorch --push .
+```sh
+docker buildx build --platform linux/arm64 -t <registry>/pytorch --push .
+```
 
 
 # Required Privileges

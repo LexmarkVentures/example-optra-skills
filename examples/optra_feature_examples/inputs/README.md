@@ -7,7 +7,9 @@ Once the skill is running on the device, go to the workflows page and select the
 
 # How to build
 
-    docker buildx build --platform linux/arm64 -t <registry>/inputs --push .
+```sh
+docker buildx build --platform linux/arm64 -t <registry>/inputs --push .
+```
 
 
 # Inputs

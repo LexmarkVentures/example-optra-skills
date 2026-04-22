@@ -16,11 +16,13 @@ Once the workflow is synced, you will start to get emails with the counter value
 
 # How to build
 
-    docker buildx build --platform linux/arm64 -t <registry>/outputs --push .
+```sh
+docker buildx build --platform linux/arm64 -t <registry>/outputs --push .
+```
 
 
 # Outputs
-  * add an output
+  * Add an output
     * Output Key = "counter"
     * Output Label = "Counter"
     * Data Type = "Number"

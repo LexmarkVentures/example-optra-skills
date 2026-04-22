@@ -24,12 +24,15 @@ First, ensure Docker is installed on your build machine. You can follow the inst
 
 Each example skill directory includes a sample Docker build command. It typically looks like this:
 
-  docker buildx build --platform linux/arm64 -t <registry>/<skill_name> --push .
-
+```sh
+docker buildx build --platform linux/arm64 -t <registry>/<skill_name> --push .
+```
 
 Run this command from the root of the skill directory. It will build the image and push it to your repository. Afterward, you can verify the image with:
 
-  docker image list
+```sh
+docker image list
+```
 
 
 ---

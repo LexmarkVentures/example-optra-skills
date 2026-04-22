@@ -6,4 +6,6 @@ For more information on Optra settings, go to the [Optra Settings Docs](../../..
 
 # How to build
 
-    docker buildx build --platform linux/arm64 -t <registry>/optra_settings --push .
+```sh
+docker buildx build --platform linux/arm64 -t <registry>/optra_settings --push .
+```

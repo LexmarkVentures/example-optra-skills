@@ -6,7 +6,9 @@ The animation displays a red bouncing ball that moves around the screen, bouncin
 
 # How to build
 
-    docker buildx build --platform linux/arm64 -t <registry>/hdmi_display --push .
+```sh
+docker buildx build --platform linux/arm64 -t <registry>/hdmi_display --push .
+```
 
 
 # Required Privileges

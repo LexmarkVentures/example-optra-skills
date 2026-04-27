@@ -1,3 +1,9 @@
 env.sh
 .python-version
 .DS_Store
+
+# Rockchip-proprietary RKNN runtime files (confidential license — fetch via fetch_rknn_deps.sh)
+examples/adv_examples/rknn_inference_server/inference_server/include/rknn_api.h
+examples/adv_examples/rknn_inference_server/inference_server/include/rknn_custom_op.h
+examples/adv_examples/rknn_inference_server/inference_server/include/rknn_matmul_api.h
+examples/adv_examples/rknn_inference_server/inference_server/lib/librknnrt.so

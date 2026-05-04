@@ -50,8 +50,7 @@ More information on the CX2000 Optra Device and how to run models on the NPU can
 
 # Setup
 
-Before building, fetch the Rockchip-proprietary runtime files that cannot be
-distributed in this repository (confidential Rockchip license):
+Before building, fetch the Rockchip-proprietary runtime files:
 
 ```sh
 cd examples/adv_examples/rknn_inference_server
